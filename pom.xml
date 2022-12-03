@@ -98,11 +98,6 @@
 		<plugins>
 
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version> <!--$NO-MVN-MAN-VER$ -->
@@ -112,29 +107,20 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>fully qualified Main Class name</mainClass>
+				</configuration>
 				<executions>
 					<execution>
-						<id>attach-artifacts</id>
-						<phase>package</phase>
 						<goals>
-							<goal>attach-artifact</goal>
+							<goal>repackage</goal>
 						</goals>
-						<configuration>
-							<artifacts>
-								<artifact>
-									<file>test-${project.version}</file>
-									<type>jar</type>
-								</artifact>
-							</artifacts>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			
 		</plugins>
 	</build>
 

@@ -21,3 +21,27 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#Eclipse
+.project
+
+*/target/**
+
+### STS ###
+.apt_generated .classpath .factorypath .project .settings .springBeans
+.sts4-cache
+
+#Spring Tool Suite
+*.classpath 
+*.class 
+*.prefs 
+*.jar 
+*.lst 
+*.project 
+*.factorypath 
+*.original 
+target/ 
+.settings/ 
+.apt_generated 
+.sts4-cache 
+.springBeans
