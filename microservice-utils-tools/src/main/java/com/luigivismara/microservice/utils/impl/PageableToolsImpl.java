@@ -3,6 +3,7 @@ package com.luigivismara.microservice.utils.impl;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -26,6 +27,7 @@ public class PageableToolsImpl implements PageableTools, Serializable {
    * @param repositoryValueObject the repository value object
    * @return the pageable list
    */
+  @Bean
   @Override
   public GenericResponses<Object> getPageableList(Object entityObject,
       Object repositoryValueObject) {

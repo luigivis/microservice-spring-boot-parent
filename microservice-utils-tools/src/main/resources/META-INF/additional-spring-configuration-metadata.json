@@ -1,0 +1,5 @@
+{"properties": [{
+  "name": "jwt.token",
+  "type": "java.lang.String",
+  "description": "Jason Web Token Key"
+}]}
