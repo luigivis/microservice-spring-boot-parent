@@ -156,3 +156,26 @@ El pom deberia quedarnos con una estructura similar a la siguiente
 	</build>
 
 </project>
+
+## Para configurar el swagger copiar lo siguiente y pegarlo en su custom project:
+ 
+
+    <!-- Swagger auto configuration -->
+			<plugin>
+				<groupId>org.springdoc</groupId>
+				<artifactId>springdoc-openapi-maven-plugin</artifactId>
+				<version>0.2</version>
+				<executions>
+					<execution>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<apiDocsUrl>http://localhost:${microservice.port}/v3/api-docs</apiDocsUrl>
+					<outputFileName>openapi.json</outputFileName>
+					<outputDir>${project.build.directory}</outputDir>
+				</configuration>
+			</plugin>
