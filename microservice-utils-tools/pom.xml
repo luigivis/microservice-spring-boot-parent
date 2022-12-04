@@ -8,11 +8,11 @@
 	<parent>
 		<groupId>com.luigivismara</groupId>
 		<artifactId>microservice-spring-boot-parent</artifactId>
-		<version>1.0</version>
+		<version>1.1</version>
 	</parent>
 
 	<artifactId>microservice-utils-tools</artifactId>
-	<version>1.1</version>
+	<version>1.2</version>
 	<name>Microservice Utils Tools</name>
 	<description>Utils Tools Jwt, Generic Response, password Encrypt ...</description>
 	<packaging>jar</packaging>

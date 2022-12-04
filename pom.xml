@@ -10,15 +10,26 @@
 
 	<groupId>com.luigivismara</groupId>
 	<artifactId>microservice-spring-boot-parent</artifactId>
-	<version>1.0</version>
+	<version>1.3</version>
 	<name>MicroService SpringBoot Paren</name>
-	<description>Microservice Lib with springboot, swagger, jwt, pageable</description>
+	<description>Microservice Lib with springboot, swagger, jwt, pageable, prometheus</description>
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.micrometer/micrometer-registry-prometheus -->
+		<dependency>
+			<groupId>io.micrometer</groupId>
+			<artifactId>micrometer-registry-prometheus</artifactId>
+			<version>1.10.2</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
