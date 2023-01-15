@@ -23,14 +23,12 @@ public class PageableToolsImpl implements PageableTools, Serializable {
   /**
    * Gets the pageable list.
    *
-   * @param entityObject the entity object
    * @param repositoryValueObject the repository value object
    * @return the pageable list
    */
   @Bean
   @Override
-  public GenericResponses<Object> getPageableList(Object entityObject,
-      Object repositoryValueObject) {
+  public GenericResponses<Object> getPageableList(Object repositoryValueObject) {
 
     var genericResponses = new GenericResponses<Object>();
 
@@ -42,7 +40,7 @@ public class PageableToolsImpl implements PageableTools, Serializable {
       listPages = pageTuts.getContent();
 
       var response = new HashMap<>();
-      response.put(entityObject.toString().replaceAll("class com.example.monitoring.entity.", ""), listPages);
+      response.put("value", listPages);
       response.put("currentPage", pageTuts.getNumber());
       response.put("totalItems", pageTuts.getTotalElements());
       response.put("totalPages", pageTuts.getTotalPages());

@@ -28,7 +28,7 @@ public class GenericResponses<Body> {
         return ResponseEntity.status(genericResponse.getStatus().getHttpStatus()).body(genericResponse);
     }
 
-    public GenericResponses(@NonNull Body body) {
+	public GenericResponses(@NonNull Body body) {
         this.body = body;
     }
 }

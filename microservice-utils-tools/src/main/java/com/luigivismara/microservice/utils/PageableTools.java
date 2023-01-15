@@ -12,9 +12,8 @@ public interface PageableTools {
   /**
    * Gets the pageable list.
    *
-   * @param entityObject the entity object
    * @param repositoryValueObject the repository value object
    * @return the pageable list
    */
-  GenericResponses<?> getPageableList(Object entityObject, Object repositoryValueObject);
+  GenericResponses<?> getPageableList(Object repositoryValueObject);
 }
