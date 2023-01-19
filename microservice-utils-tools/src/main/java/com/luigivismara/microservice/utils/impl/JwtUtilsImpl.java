@@ -33,8 +33,7 @@ import lombok.extern.slf4j.Slf4j;
 public class JwtUtilsImpl implements JwtUtils{
 
   /** The secret key. */
-  @Value("${jwt.token}")
-  private String secretKeyString;
+  private final String secretKeyString = "Rb7wZF0a1O0LK3GmJVrf8NvpfCzmAYeyXE35ELE06GQoAi6MESkYBb3gjr6dOZJW";
 
   /**
    * Gets the key.
