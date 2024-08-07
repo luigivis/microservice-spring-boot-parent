@@ -7,7 +7,7 @@ Hola esto es un parent tipo maven que sirve para importar librerias a los proyec
 ```xml
 <groupId>com.luigivismara</groupId>
 <artifactId>microservice-spring-boot-parent</artifactId>
-<version>1.3</version>
+<version>2.0</version>
 <name>MicroService SpringBoot Parent</name>
 <description>Microservice Lib with springboot, swagger, jwt, pageable</description>
 <packaging>pom</packaging>
