@@ -4,20 +4,22 @@ Hola esto es un parent tipo maven que sirve para importar librerias a los proyec
 
 ## La cabecera del proyecto es:
  
-
-    <groupId>com.luigivismara</groupId>
-	<artifactId>microservice-spring-boot-parent</artifactId>
-	<version>1.3</version>
-	<name>MicroService SpringBoot Parent</name>
-	<description>Microservice Lib with springboot, swagger, jwt, pageable</description>
-	<packaging>pom</packaging>
+```xml
+<groupId>com.luigivismara</groupId>
+<artifactId>microservice-spring-boot-parent</artifactId>
+<version>1.3</version>
+<name>MicroService SpringBoot Parent</name>
+<description>Microservice Lib with springboot, swagger, jwt, pageable</description>
+<packaging>pom</packaging>
+```
 
 ## Usamos las siguientes Librerias
 
+```xml
     <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.6</version>
+		<version>3.3.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
@@ -96,19 +98,23 @@ Hola esto es un parent tipo maven que sirve para importar librerias a los proyec
 			<artifactId>spring-context</artifactId>
 		</dependency>
 	</dependencies>
-		
+```
 
 ## Importar al proyecto
 Para importar el parent al proyecto debemos escribir en la terminal  `mvn clean install` en la carpeta del proyecto luego de esto lo importamos a nuestro proyecto
 
-    <parent>
-		<groupId>com.luigivismara</groupId>
-		<artifactId>microservice-spring-boot-parent</artifactId>
-		<version>1.0</version>
-	</parent>
+```xml
+<parent>
+	<groupId>com.luigivismara</groupId>
+	<artifactId>microservice-spring-boot-parent</artifactId>
+	<version>1.0</version>
+</parent>
+```
+
 El pom deberia quedarnos con una estructura similar a la siguiente
 
-    <?xml version="1.0" encoding="UTF-8"?>
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
 	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">	
 	
 	<modelVersion>4.0.0</modelVersion>
@@ -121,61 +127,15 @@ El pom deberia quedarnos con una estructura similar a la siguiente
 
 	<properties>
 		<microservice.port>8081</microservice.port>
-		<java.version>17</java.version>
+		<java.version>21</java.version>
 	</properties>
 
 	<parent>
 		<groupId>com.luigivismara</groupId>
 		<artifactId>microservice-spring-boot-parent</artifactId>
-		<version>1.0</version>
+		<version>2.0</version>
 	</parent>
 
-	<build>
-		<plugins>
-			<!-- Swagger auto configuration -->
-			<plugin>
-				<groupId>org.springdoc</groupId>
-				<artifactId>springdoc-openapi-maven-plugin</artifactId>
-				<version>0.2</version>
-				<executions>
-					<execution>
-						<phase>integration-test</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<apiDocsUrl>http://localhost:${microservice.port}/v3/api-docs</apiDocsUrl>
-					<outputFileName>openapi.json</outputFileName>
-					<outputDir>${project.build.directory}</outputDir>
-				</configuration>
-			</plugin>
-
-		</plugins>
-	</build>
 
 </project>
-
-## Para configurar el swagger copiar lo siguiente y pegarlo en su custom project:
- 
-
-    <!-- Swagger auto configuration -->
-			<plugin>
-				<groupId>org.springdoc</groupId>
-				<artifactId>springdoc-openapi-maven-plugin</artifactId>
-				<version>0.2</version>
-				<executions>
-					<execution>
-						<phase>integration-test</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<apiDocsUrl>http://localhost:${microservice.port}/v3/api-docs</apiDocsUrl>
-					<outputFileName>openapi.json</outputFileName>
-					<outputDir>${project.build.directory}</outputDir>
-				</configuration>
-			</plugin>
+```
